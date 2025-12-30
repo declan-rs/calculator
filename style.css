@@ -1,0 +1,33 @@
+#calc {
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    height: 500px;
+    width: 350px;
+    justify-self: center;
+    border-radius: 10px;
+    padding: 20px;
+    gap: 8px;
+}
+
+#display {
+    width: 100%;
+    background-color: lightgrey;
+    border-radius: 5px;
+    flex: 1 1 auto;
+    margin-bottom: 20x;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.btn {
+    background-color: lightgrey;
+    height: 80px;
+    width: 80px;
+    border-radius: 5px;
+}
