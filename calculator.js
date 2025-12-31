@@ -1,3 +1,6 @@
+currentNum = 0;
+displayNumber(currentNum);
+
 function add(x, y) {
     return x + y;
 }
@@ -28,3 +31,13 @@ function operate(op, x, y) {
         return "Error, invalid operator";
     }
 }
+
+// Puts another number on the display
+function displayNumber(num) {
+    document.getElementById("display").textContent = num;
+}
+
+// Add button event listeners
+document.getElementById("1").addEventListener("click", () => displayNumber(1));
+document.getElementById("2").addEventListener("click", () => displayNumber(2));
+document.getElementById("3").addEventListener("click", () => displayNumber(3));
