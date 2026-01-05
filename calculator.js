@@ -38,6 +38,13 @@ function displayNumber(num) {
 }
 
 // Add button event listeners
+document.getElementById("0").addEventListener("click", () => displayNumber(0));
 document.getElementById("1").addEventListener("click", () => displayNumber(1));
 document.getElementById("2").addEventListener("click", () => displayNumber(2));
 document.getElementById("3").addEventListener("click", () => displayNumber(3));
+document.getElementById("4").addEventListener("click", () => displayNumber(4));
+document.getElementById("5").addEventListener("click", () => displayNumber(5));
+document.getElementById("6").addEventListener("click", () => displayNumber(6));
+document.getElementById("7").addEventListener("click", () => displayNumber(7));
+document.getElementById("8").addEventListener("click", () => displayNumber(8));
+document.getElementById("9").addEventListener("click", () => displayNumber(9));
