@@ -24,13 +24,15 @@ function divide(x, y) {
 
 // Takes operator and two numbers, returns result
 function operate(x, op, y) {
+    x = Number(x);
+    y = Number(y);
     if(op == '+') {
         return add(x, y);
     } else if(op == '-') {
         return subtract(x, y);
-    } else if(op == '*') {
+    } else if(op == 'x') {
         return multiply(x, y); 
-    } else if(op == '/') {
+    } else if(op == '÷') {
         return divide(x, y);
     } else {
         return "Error, invalid operator";
@@ -43,9 +45,9 @@ function equals() {
         return;
     }
     result = operate(num1, operator, num2);
-    num1 = result;
+    num1 = result.toString();
     operator = "";
-    num2 = 0;
+    num2 = "";
     updateDisplay(result);
     hasOp = false;
     ready = false;
