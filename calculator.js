@@ -57,9 +57,23 @@ function numClicked(num) {
         hasNum1 = true;
     } else if(hasOp == false) {
         num1 += num;
+    } else if(ready == false) {
+        num2 = num;
+        ready = true;
+    } else if(ready == true) {
+        num2 += num;
     }
 
     updateDisplay();
+}
+
+function operatorClicked(op) {
+    if(ready || hasOp) {
+        return;
+    }
+    operator = op;
+    updateDisplay();
+    hasOp = true;
 }
 
 function allClear() {
@@ -87,6 +101,11 @@ document.getElementById("6").addEventListener("click", () => numClicked("6"));
 document.getElementById("7").addEventListener("click", () => numClicked("7"));
 document.getElementById("8").addEventListener("click", () => numClicked("8"));
 document.getElementById("9").addEventListener("click", () => numClicked("9"));
+
+document.getElementById("+").addEventListener("click", () => operatorClicked("+"));
+document.getElementById("-").addEventListener("click", () => operatorClicked("-"));
+document.getElementById("÷").addEventListener("click", () => operatorClicked("÷"));
+document.getElementById("x").addEventListener("click", () => operatorClicked("x"));
 
 document.getElementById("=").addEventListener("click", () => equals());
 document.getElementById("ac").addEventListener("click", () => allClear());
