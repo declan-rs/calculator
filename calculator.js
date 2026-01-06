@@ -62,6 +62,16 @@ function numClicked(num) {
     updateDisplay();
 }
 
+function allClear() {
+    num1 = "";
+    num2 = "";
+    operator = "";
+    updateDisplay();
+    hasNum1 = false;
+    hasOp = false;
+    ready = false;
+}
+
 function updateDisplay() {
     document.getElementById("display").textContent = num1 + operator + num2;
 }
@@ -79,3 +89,4 @@ document.getElementById("8").addEventListener("click", () => numClicked("8"));
 document.getElementById("9").addEventListener("click", () => numClicked("9"));
 
 document.getElementById("=").addEventListener("click", () => equals());
+document.getElementById("ac").addEventListener("click", () => allClear());
